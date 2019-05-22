@@ -1,0 +1,57 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	
+	double number [10];   
+	int integer, maxnumber,minnumber, largestnumber, total, average,smallestnumber;
+	
+	cout << "Enter the 10 integers you desired: " << endl; 
+	
+
+	for (integer = 0;integer < 10 ;integer++)
+		number[integer] = 0.0;
+		
+	for( integer = 0; integer < 10 ; integer++)
+		cin >> number[integer];
+		
+	for (integer = 0; integer < 10 ; integer++)
+		cout << number[integer] << "";
+		cout << endl; 
+		cout << "largest number is:"<< largestnumber;
+	
+
+	
+	total = 0;
+		for (integer = 0;integer < 10; integer++)
+		total = total + number[integer];
+		cout <<" Total = " << total << endl;
+	
+	average = total / 10;
+		cout << " average = " << average << endl;
+	
+	maxnumber = 0;
+		for (integer = 1;integer < 10; integer++)
+			if (number[maxnumber] < number[integer])
+			maxnumber = integer;
+	
+	largestnumber = number[maxnumber];
+		cout << "Largest number =" << largestnumber << endl;
+	
+	minnumber = 0;
+		for (integer = 1; integer < 10; integer++)
+			if (number[maxnumber] > number [integer])
+			minnumber = integer;
+			smallestnumber = number[minnumber];
+		cout << "Smallest number = " << smallestnumber << endl; 	
+		
+
+_getch();
+
+return 0;
+
+}
