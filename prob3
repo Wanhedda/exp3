@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+#define MAX 100
+
+int main()
+{
+    
+    int arr[MAX];
+    int n,i,j;
+    int temp;
+    
+
+    cout<<"Enter the size of the array: ";
+    cin>>n;
+    
+
+    if(n<0 || n>MAX)
+    {
+        cout<<"Input valid 1-100 size of array only!"<<endl;
+        return -1;
+    }
+    
+    
+    for(i=0;i<n;i++)
+    {
+        cout<<"Array element "<<i+1<<": ";
+        cin>>arr[i];
+    }
+    
+    
+    for(i=0;i<n;i++)
+    {        
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                temp  =arr[i]; 
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    
+    cout<<endl<<"The reverse sorted Array is: ";
+    for(i=0;i<n;i++)
+        cout<<arr[i]<<" ";
+    cout<<endl;    
+    
+    cout << endl << "The size of array is: " << n;
+
+    
+    return 0;
+}
